@@ -6,8 +6,17 @@ cd /content
 # Install uv package manager
 pip install uv
 
-# Install dependencies from pyproject.toml in current directory
-uv pip install -r "$(pwd)/pyproject.toml" --quiet
+# Check if pyproject.toml exists
+if [ ! -f "pyproject.toml" ]; then
+    echo "Error: pyproject.toml not found in current directory"
+    echo "Current directory contents:"
+    ls -la
+    exit 1
+fi
+
+# Install dependencies from pyproject.toml
+echo "Installing dependencies from pyproject.toml..."
+uv pip install -r pyproject.toml --quiet
 
 # Install spatial-correlation-sampler without build isolation
 uv pip install spatial-correlation-sampler --no-build-isolation
