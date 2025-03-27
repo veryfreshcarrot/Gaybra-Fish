@@ -7,20 +7,23 @@ dependencies = [
     "torch>=2.0.0",
     "torchvision",
     "torchaudio",
-    "numpy==1.23.5",
+    "numpy>1.23.5",
     "opencv-python>=4.8.0",
     "pycocotools>=2.0.6",
     "matplotlib>=3.7.0",
-    "Pillow>=10.0.0",
+    "Pillow==9.2.0",
     "scikit-image>=0.21.0",
     "gradio==3.39.0",
     "gdown>=5.0.0",
-    "ffmpeg>=1.4",
+    "ffmpeg==1.4",
     "filterpy",
     "segment-anything-py>=1.0.1",
     "pytorch-extension>=0.2",
     "setuptools>=78.1.0",
-    "spatial-correlation-sampler"
+    "spatial-correlation-sampler",
+    "timm==0.4.5",
+    "wget",
+
 ]
 
 [[tool.poetry.source]]
