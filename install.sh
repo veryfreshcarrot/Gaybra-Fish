@@ -7,7 +7,7 @@ cd /content
 pip install uv
 
 # Check if pyproject.toml exists
-if [ ! -f "pyproject.toml" ]; then
+if [ ! -f "Gaybra/pyproject.toml" ]; then
     echo "Error: pyproject.toml not found in current directory"
     echo "Current directory contents:"
     ls -la
