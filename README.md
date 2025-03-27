@@ -43,10 +43,13 @@ For Google Colab users, copy and paste the following commands into your first ce
 
 ```python
 %cd /content
+!rm -rf Gaybra GayTracker
 !git clone https://github.com/veryfreshcarrot/Gaybra-Fish.git Gaybra
 
 !bash Gaybra/install.sh
-!rm -rf content/Gaybra
+!rm -rf Gaybra
+import os
+os.kill(os.getpid(), 9)
 ```
 
 After running these commands, you can install the required packages using:
